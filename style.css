@@ -19,6 +19,7 @@ img {
 
 p {
     line-height: 1.5;
+    font-size: 18px;
 }
 
 main {
@@ -31,7 +32,16 @@ main {
 
 .row {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.row__narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
@@ -51,6 +61,7 @@ button {
 
 a {
     text-decoration: none;
+    display: inline;
 }
 
 section {
@@ -221,6 +232,7 @@ NAVBAR
     border-bottom: 2px solid transparent;
     position: relative;
     transition: all 300ms;
+    cursor: pointer;
 }
 
 .modal__link:hover {
@@ -323,6 +335,17 @@ header .row {
     top: 0px;
     bottom: 0px;
     z-index: 1;
+    transition: border-color 300ms;
+}
+
+.header__email--input:hover {
+    border-color: rgba(160, 174, 192);
+}
+
+.header__email--input:focus {
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    border-color: rgba(100 21 255);
 }
 
 .header__email--btn {
@@ -385,15 +408,6 @@ FEATURES
 #features {
     position: relative;
     text-align: center;
-}
-
-.row__narrow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
 } 
 
 .features {
@@ -913,7 +927,6 @@ TESTIMONIALS
 
 .testimonial__profile {
     display: flex;
-    align-items: center;
 }
 
 .testimonial__pic {
@@ -924,6 +937,7 @@ TESTIMONIALS
 
 .testimonial__info {
     margin-left: 24px;
+    align-items: center;
 }
 
 .testimonial__role {
@@ -946,6 +960,7 @@ TESTIMONIALS
     border-radius: 50%;
     margin: 0 12px;
     transition: all 300ms;
+    cursor: pointer;
 }
 
 .testimonial__button svg {
@@ -1048,6 +1063,8 @@ START
     line-height: 1.5;
     letter-spacing: 0.025em;
     margin: 1px;
+    z-index: 2;
+    cursor: pointer;
 }
 
 .start__button:nth-child(1) {
@@ -1637,7 +1654,7 @@ RESPONSIVENESS
         flex-direction: column;
     }
 
-    .start__button:hover:nth-child(1) {
+    .start__button:nth-child(1) {
         margin-right: 0;
     }
 
