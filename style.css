@@ -293,6 +293,10 @@ HEADER / ABOUT US
 
 */
 
+header {
+    position: relative;
+}
+
 header .row {
     display: flex;
     justify-content: center;
@@ -407,7 +411,6 @@ FEATURES
 
 #features {
     position: relative;
-    text-align: center;
 } 
 
 .features {
@@ -464,6 +467,12 @@ font-weight: 500;
 
 #features .section__title, 
 #pricing .section__title {
+    text-align: center;
+}
+
+#features .section__para,
+#pricing .section__para {
+    max-width: 576px;
     text-align: center;
 }
 
@@ -703,11 +712,6 @@ PRICING
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#pricing .section__para {
-    max-width: 576px;
-    text-align: center;
 }
 
 .plans {
@@ -1348,6 +1352,7 @@ RESPONSIVENESS
 
     .feature__row {
         padding: 32px 8px;
+        margin: 0 16px;
     }
 
     .feature__para {
